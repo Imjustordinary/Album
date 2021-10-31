@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+
+  font-family: Arial;
+}
+
+table tr:first-child .key {
+  background-color: #a5a5a5;
+}
+
+table tr:first-child .key:active {
+  background-color: #a5a5a590;
+}
+
+table tr td:last-child .key {
+  background-color: #ffa45c;
+}
+
+table tr td:last-child .key:active {
+  background-color: #ffa45ccc;
+}
+
+.key {
+  user-select: none;
+  color: white;
+  background-color: #333333;
+  width: 90px;
+  height: 90px;
+  border-radius: 90px;
+  border: 0;
+  font-size: x-large;
+  /* margin-bottom: 10px; */
+  /* margin: 5px; */
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.cal {
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.display {
+  color: white;
+  width: 370px;
+  white-space: nowrap;
+  text-align: right;
+  font-size: 80px;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.key:active {
+  background-color: #33333390;
+}
+
+.zero {
+  width: 180px;
+}
+
+@media only screen and (max-width: 499px) {
+  .cal {
+    position: fixed;
+    width: 100%;
+    margin: auto;
+  }
+
+  .key {
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+  }
+
+  table {
+    width: inherit;
+    margin: auto;
+  }
+  .display {
+    width: 100%;
+    padding-right: 10%;
+  }
+  .zero {
+    width: 160px;
+  }
+}
